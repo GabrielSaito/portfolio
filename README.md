@@ -1,5 +1,7 @@
 in progress;
 
+Api soon
+
 Available commands:
 
 'technologies': Technologies I have worked with.
