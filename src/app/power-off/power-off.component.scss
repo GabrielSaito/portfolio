@@ -1,0 +1,66 @@
+button {
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    transition: color 0.3s;
+  }
+  
+  /* Styling for the blackout effect */
+  .blackout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+     border: 1px solid rgba( 255, 255, 255, 0.18 );
+    opacity: 1; 
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; 
+  }
+  .div-black{
+    top: 10px;
+    left: 0;
+    width: 110%;
+    height: 160%;
+    background-color: black;
+    opacity: 1; 
+    z-index: 1001; 
+     align-items: center;
+     pointer-events: none; 
+  }
+  
+  /* Styling for the shutdown message */
+  .shutdown-message {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  /* Styling for the loading indicator */
+  .loading-indicator {
+    margin-top: 20px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

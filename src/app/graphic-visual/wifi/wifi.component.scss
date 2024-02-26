@@ -1,0 +1,76 @@
+/* wifi-search.component.css */
+
+.wifi-search {
+    width: 300px; 
+    overflow: hidden;
+     position: fixed;
+    z-index: 888;
+    bottom: 70px;
+    right: 20px;
+    width: 400px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+   }
+  
+  .search-bar {
+
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+    background: rgba( 255, 255, 255, 0.25 );
+    color: white;
+  }
+  
+  input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f2f2f2;
+  }
+  
+  .search-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+     background-size: contain;
+  }
+  
+  .wifi-list {
+    padding: 10px;
+  }
+
+  .wifi-name{
+    color: white;
+    text-shadow: black;
+
+  }
+  
+  .wifi-item {
+     padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+ 
+  
+  .wifi-strength {
+    height: 10px;
+    background-color: #4caf50; /* Cor verde para indicar força de sinal */
+    border-radius: 5px;
+  }
+  

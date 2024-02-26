@@ -1,0 +1,11 @@
+<div class="windows-audio">
+  <div class="audio-controls">
+    <div class="volume-control">
+      <div class="volume-icon"></div>
+      <input type="range" min="0" max="100" [(ngModel)]="volume" (input)="updateVolume()" />
+    </div>
+    <button class="mute-button" (click)="toggleMute()">
+      <div class="mute-icon"></div>
+    </button>
+  </div>
+</div>

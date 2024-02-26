@@ -1,0 +1,183 @@
+ 
+  <app-user-login *ngIf="logoff"></app-user-login>
+
+<body *ngIf="logoff == false">
+
+  <app-glitch-effect >
+
+  </app-glitch-effect>
+ 
+
+
+<div *ngIf="
+    selectedCategory === 'apt install graphic-card-display' ||
+    selectedCategory === 'apt i graphic-card-display'  ||   selectedCategory === '3d'
+
+  ">
+  <app-canvas-box-component style="width: 100%; height: 100%"></app-canvas-box-component>
+</div>
+
+<div class="windows-xp">
+  <app-power-off *ngIf="selectedCategory === 'poweroff'"></app-power-off>
+
+
+  <div class="content">
+    <form (submit)="executeCommand()" #commandForm="ngForm" >
+      <p>D:\Portfolio\GabrielSaito\{{selectedCategory}}></p>
+      <input style="background: #00000000; border: none; outline: none" [(ngModel)]="command" name="command"
+        autofocus />
+      <!-- <div class="placeholder" [class.blinking]="isBlinking">_</div> -->
+    </form>
+    <div *ngIf="selectedCategory === 'home'">
+      <p>Welcome to my portfolio, {{userName}}!</p>
+      <p>Type 'help' for a list of available commands.</p>
+    </div>
+
+    <div *ngIf="selectedCategory === 'help'">
+      <p>Available commands:</p>
+      <ul>
+        <li><code>'technologies'</code>: Technologies I have worked with. </li>
+        <li><code>'certificates'</code>:  My certifications</li>
+        <li><code>'experience'</code>: Professional experience</li>
+        <li><code>'about me'</code>:  Information about myself</li>
+      </ul>
+        <p>Shortcuts:</p>
+        <ul>
+
+        <li><code>'language'</code>: Switch the system language</li>
+        <li><code>'blog'</code>: Personal content</li>
+        <li><code>'exit'</code>: Exit a program or system</li>
+        <li><code>'back'</code>: Return to the beginning or previous step </li>
+        <li><code>'cd'</code>: Change the current directory in a file system</li>
+        <li><code>'sudo su'</code>: Administrator privileges</li>
+        <li><code>'rickroll'</code>: ??Rick Roll??</li>
+        <li><code>'poweroff'</code>:  Power off the system</li>
+        <li><code>'apt install graphic-card-display'</code>:  Install graphic interface</li>
+        <li><code>'logoff'</code>: Disconnect </li>
+
+      </ul> 
+    </div>
+
+    <div *ngIf="selectedCategory === 'sudo'">
+      <p>Available commands:</p>
+      <ul>
+        <li>'apt install graphic-card-display'</li>
+      </ul>
+    </div>
+    <div *ngIf="selectedCategory === 'contact'">
+
+      <div *ngIf="cursos.length > 0">
+        <ul>
+          <li *ngFor="let contact of contacts">
+            <a [href]="contact.link" target="_blank">{{ contact.redeSocial }}</a>
+          </li>
+        </ul>
+      </div>   
+    </div>
+    <div *ngIf="selectedCategory === 'clear'">
+       <ul>
+        <li>'_'</li>
+      </ul>
+    </div>
+    <div *ngIf="selectedCategory === 'aboutme'">
+      <ul><code>Hello {{userName}}!</code>
+        <ul><code> I'm Gabriel Saito,</code></ul>
+        <code> 22, Full Stack Developer based in Brazil.</code>
+       </ul>
+    </div>
+    <div *ngIf="selectedCategory === 'logoff'">
+     </div>
+    <div *ngIf="selectedCategory === 'sudo su'">
+      <ul>
+        <p>
+          If prompted, enter your password. If you receive an error, ensure that
+          you have entered the correct password. Note: If you are not an
+          administrator, you may not have the necessary privileges to use
+          <code>sudo su</code>.
+        </p>
+        <li>'su'</li>
+      </ul>
+    </div>
+    <div *ngIf="selectedCategory === 'blog'">
+      <p>=== My Blog ===</p>
+      <ul>
+         <ul>
+          <ul> I hate Delphi or I hate Embarcadero?  </ul>
+          <ul>
+          <code> Delphi holds a special place in my heart as it was my first job, and I developed a genuine liking for it. The platform provided me with a valuable introduction to programming, and I enjoyed the familiarity of its language and the ease with which I could learn and create within its environment. Despite the challenges posed by Embarcadero's licensing policies, the nostalgic and positive memories associated with Delphi continue to influence my perception of the platform. It served as a foundational stepping stone in my career, fostering both skill development and a genuine fondness for programming.</code>
+        </ul>
+        </ul>
+        </ul>
+        </div>
+
+    <div *ngIf="selectedCategory === 'technologies'">
+      <p>=== Technologies ===</p>
+      <ul>
+         <ul>
+          <li *ngFor="let tech of technologies">{{ tech }}</li>
+        </ul>
+    
+        <p>=== Databases ===</p>
+        <ul>
+          <li *ngFor="let db of dbs">{{ db }}</li>
+        </ul>
+        <!-- Add more technologies as needed -->
+      </ul>
+    </div>
+    <div *ngIf="selectedCategory === 'certificates'">
+      <p>=== Certificates ===</p>
+      <div *ngIf="cursos.length > 0">
+        <ul>
+          <li *ngFor="let curso of cursos">
+            <a [href]="curso.link" target="_blank">{{ curso.nome }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div *ngIf="selectedCategory === 'experience'">
+      <p>=== Experience ===</p>
+      <ul>
+        <li>Software Developer at XYZ Company</li>
+        <li>Frontend Developer Intern at ABC Inc.</li>
+       </ul>
+    </div>
+
+    <div *ngIf="selectedCategory === 'rickroll'">
+      <div>
+         <audio style="visibility: hidden;" #audioPlayer controls autoplay>
+          <source src="../../assets/rr.mp3" type="audio/mp3"> 
+          Seu navegador não suporta a tag de áudio.
+        </audio>
+         
+      <p> ▶▶ Never Gonna Give You Up  ▶▶</p>
+      <ul>
+        <li>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</li>
+        <li>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢶⣾⣷⣾⣿⣿⣿⣿⣿⣿⣷⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</li>
+        <li>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⠿⠿⢿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</li>
+        <li>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠁⠁⠈⠁⠀⠀⠀⠀⠀⢹⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</li>
+        <li>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⢸⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</li>
+        <li>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⢹⣿⣿⡆⠀⠈⠥⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</li>
+        <li>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</li>
+        <li>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⢽⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</li>
+        <li>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣶⣶⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</li>
+        <li>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⢿⡌⠀⠀⠰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</li>
+        <li>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡆⠀⣿⣾⣶⣆⠀⠀⢨⡄⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</li>
+        <li>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣶⣾⣿⣿⣿⡈⠛⢿⣿⣿⡄⠀⢸⢊⣀⠈⣿⣿⣶⣶⣤⣄⠀⠀⠀</li>
+        <li>⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠈⠀⠉⠁⠀⠀⠄⠀⠀⣿⣿⣿⣿⣿⣿⣷⣦⣄⠀</li>
+        <li>⠀⠀⠀⠀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣡⡧⠤⠤⠒⠠⠠⠤⢄⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇</li>
+        <li>⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠒⠒⠒⠠⠤⠤⠄⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇</li>
+        <li>⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡧⠤⠤⠉⣉⣉⢸⣓⡲⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇</li>
+        <li>⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</li>
+        <li>⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇</li>
+        <li>⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</li>
+ </ul>
+</div>       
+       
+    </div>
+
+  </div>
+</div>
+
+</body>
+
+

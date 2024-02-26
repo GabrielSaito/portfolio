@@ -1,0 +1,22 @@
+ 
+
+<div #Window class="window" [class.minimized]="isMinimized" [class.closed]="isClosed" [class.resized]="isResized"
+ >  
+  <div class="title-bar"  (mousedown)="onMouseDown($event)" (mousemove)="onMouseMove($event)" (mouseup)="onMouseUp()">
+    <div class="buttons">
+        <div class="chrome-buttons"> 
+            <div class="chrome-button red" (click)="closedWindow()"></div>
+            <div class="chrome-button yellow" (click)="minimizeWindow()"></div>
+            <div class="chrome-button green"></div>
+          </div>
+    </div>
+    <div  style="font-size: 13px; color: #dddddd;">  {{pageName}} </div>
+
+  </div>
+
+
+  
+  <div class="content">
+    <ng-content style="cursor:default;"></ng-content>
+  </div>
+</div>

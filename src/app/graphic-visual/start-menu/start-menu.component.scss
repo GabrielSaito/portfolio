@@ -1,0 +1,57 @@
+div {
+  width: 20%; 
+  margin: 13%;
+  margin-bottom: 200px;
+  margin-left: 10%;
+  height: 60%; 
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  transition: width 0.3s ease, height 0.3s ease, margin 0.3s ease, box-shadow 0.3s ease;
+}
+
+div.open {
+  width: 80%; 
+  height: 80%; 
+  margin: 0;
+  box-shadow: 0 16px 64px 0 rgba(31, 38, 135, 0.37);
+}
+
+button {
+  border: none;
+  background-color: rgba( 255, 255, 255, 0.25 );
+ border-radius: 10px;
+  height: 15%; 
+  width: 25%; 
+   margin:4%;
+  margin-bottom: 1%;
+}
+
+.button-search {
+  height: 80px; 
+  width: 80px; 
+}
+
+.button-logoff,
+.button-logoff2 {
+  height: 40px; 
+  font-size: 12px;
+}
+
+.button-logoff2 {
+  width: 160px; 
+}
+
+.grid-container {
+  grid-gap: 5px; /* Adjusted grid-gap */
+}
+
+h2 {
+  margin-top: 10px; /* Adjusted margin-top */
+  margin-bottom: 5px;
+  font-size: 18px;
+}

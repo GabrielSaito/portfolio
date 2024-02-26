@@ -1,0 +1,27 @@
+.link-preview-container {
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .link-preview-content {
+    padding: 16px;
+  }
+  
+  h3 {
+    margin: 0 0 8px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  span {
+    color: #777;
+    font-size: 12px;
+  }
+  

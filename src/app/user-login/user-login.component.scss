@@ -1,0 +1,72 @@
+  .mac-login {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      flex-direction: column;
+    /* Torna o container 100% da altura da viewport */
+      justify-content: center; /* Alinha o conteúdo verticalmente no centro */
+      align-items: center; /* Alinha o conteúdo horizontalmente no centro */
+    }
+    
+    .mac-login-window {
+      background-color: black;
+      margin-top: 10%;
+      padding: 20px;
+      border: 1px solid white;
+      border-radius: 5px;
+      width: 80vh;
+
+    }
+    
+    .mac-login-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .mac-login-photo {
+      background-size: cover;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    
+    .mac-login-field input {
+      background-color: black;
+      color: white;
+      border: none;
+      border-bottom: 1px solid white;
+      padding: 5px;
+      margin-bottom: 15px;
+      width: 100%;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    
+    .mac-login-buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    
+    .mac-login-buttons button {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    
+    /* Seletor específico para os botões na parte inferior do formulário */
+    .mac-login-buttons-bottom button {
+      margin-right: 0;
+    }
+    
+    /* Seletor específico para o componente do terminal */
+    .app-terminal {
+      /* Adicione estilos específicos para o terminal, se necessário */
+    }
+    

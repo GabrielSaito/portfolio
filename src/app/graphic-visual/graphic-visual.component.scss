@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+  }
+  
+ body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+
+body .desktop {
+    height: 100vh;
+    background-image: url("./../../assets/walpappers/windows10.webp");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden; 
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+
+  .taskbar {
+    position: fixed;
+    margin-left: 10%;
+    margin-bottom: 1%;
+
+    bottom: 0;
+    height: 43px;
+    width: 80%;
+    background: #0041721e;
+    overflow: hidden;
+
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  
+  .taskbar .icons-left {
+    height: 43px;
+    display: inline-block;
+  }
+  
+  .taskbar .icons-left #start-menu, .taskbar .icons-left #tabs-windows {
+    height: 43px;
+    width: 48px;
+    position: relative;
+  }
+  
+.icon-system{
+    background-image: url("./../../assets/icons/icon-menu.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px 22px;
+
+}
+
+  .taskbar .icons-left #start-menu i, .taskbar .icons-left #tabs-windows i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 21px;
+    color: white;
+  }
+  
+  .taskbar .icons-left #search {
+    height: 43px;
+    width: 49px;
+     background-image: url("./../../assets/icons/search-white.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px 22px;
+  }
+  
+  .taskbar .icons-left #folder {
+    height: 43px;
+    width: 49px;
+    background-image: url("./../../assets/icons/folder.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 36px 24px;
+  }
+  .taskbar .icons-left #store {
+    height: 43px;
+    width: 49px;
+    background-image: url("./../../assets/icons/store3.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 36px 24px;
+  }
+  
+  .taskbar .icons-left #chrome {
+    height: 43px;
+    width: 49px;
+    background-image: url("./../../assets/icons/internet.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26px 26px;
+  }
+ 
+  .taskbar .icons-left #terminal {
+    height: 43px;
+    width: 49px;
+    background-image: url("./../../assets/icons/terminal2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26px 26px;
+  }
+  
+  .taskbar .icons-left a {
+    display: table-cell;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .taskbar .icons-left a:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  .taskbar .icons-left a:not(:first-child) {
+    margin-left: -4px;
+  }
+  
+  .taskbar .icons-left a.border:focus {
+    border-bottom: 2px solid rgba(245, 245, 245, 0.651);
+  }
+  
+  .taskbar .icons-left .px {
+    width: 1px;
+  }
+  
+  .taskbar .icons-left .px a {
+    pointer-events: none;
+  }
+  
+  .taskbar .icons-right {
+    height: 43px;
+    float: right;
+  }
+  
+  .taskbar .icons-right #wifi {
+    height: 43px;
+    width: 49px;
+    background-image: url("./../../assets/icons/wifi.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px 22px;
+  }
+  
+  .taskbar .icons-right #sound {
+    height: 43px;
+    width: 49px;
+    background-image: url("./../../assets/icons/sound.svg");
+
+     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px 22px;
+  }
+  
+  .taskbar .icons-right #return {
+    width: 4px;
+    border-left: 1px solid grey;
+  }
+  
+  .taskbar .icons-right #notifications, .taskbar .icons-right #up {
+    height: 43px;
+    width: 42px;
+    position: relative;
+  }
+  
+  .taskbar .icons-right #notifications i, .taskbar .icons-right #up i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    color: white;
+  }
+  
+  .taskbar .icons-right .clear {
+    height: 43px;
+    width: 7px;
+    display: table-cell;
+  }
+  
+  .taskbar .icons-right .disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+  
+  .taskbar .icons-right .datetime {
+    display: table-cell;
+    width: 60px !important;
+    cursor: pointer;
+    padding-top: 3px;
+  }
+  
+  .taskbar .icons-right .datetime span {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 11.3px;
+    color: white;
+  }
+  
+  .taskbar .icons-right .datetime:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  .taskbar .icons-right a {
+    display: table-cell;
+  }
+  
+  .taskbar .icons-right a:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  .taskbar .icons-right a:not(:first-child) {
+    margin-left: -4px;
+  }
+  
+  .taskbar .icons-right .small-icons {
+    width: 24px !important;
+  }  
+ 
+   
+ 
+  
+  /* Wifi */
+  #wifi-modal {
+    background: #005a9e;
+    position: absolute;
+    right: 0;
+    bottom: 43px;
+    height: 600px;
+    width: 380px;
+    color: white;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #wifi-modal:target {
+    visibility: visible !important;
+    animation-name: open;
+    animation-duration: 0.1s;
+    transition: 0.1s;
+  }
+  
+  @keyframes open {
+    0% {
+      height: 550px;
+      opacity: 0.5;
+    }
+    100% {
+      height: 600px;
+      opacity: 1;
+    }
+  }
+  
+  

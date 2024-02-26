@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Windows 10 Clone</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+   </head>
+  <body  >
+    <app-window  *ngIf="showTerminal" [pageName]="'Terminal'"  >    <app-terminal  > </app-terminal>
+    </app-window>
+   <app-window><app-store-app> </app-store-app> </app-window>
+    <app-movable-window  ><app-windows-audio  *ngIf="audio"></app-windows-audio> </app-movable-window>
+     <app-wifi  *ngIf="wifi"> </app-wifi>
+    <app-start-menu *ngIf="isMenuVisible"></app-start-menu>
+    <app-window  *ngIf="folder" [pageName]="'Explorer'"  >    <app-explorer  > </app-explorer>
+    </app-window>
+        <app-window *ngIf="browser"  #windowRef [pageName]="'Browser'"> <app-mini-chrome  ></app-mini-chrome></app-window> 
+    <div class="animated" *ngIf="isMenuVisible">
+        <app-start-menu style="position: absolute; z-index: 999;"  > </app-start-menu>
+      </div>
+      <app-window *ngIf="showStore" #windowRef [pageName]="'Store'"> <app-store-app></app-store-app></app-window>
+
+    <div class="desktop" >
+        <div>  
+        <svg width="48px" height="48px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 6.52381C3 6.12932 3.32671 5.80952 3.72973 5.80952H8.51787C8.52437 4.9683 8.61554 3.81504 9.45037 3.01668C10.1074 2.38839 11.0081 2 12 2C12.9919 2 13.8926 2.38839 14.5496 3.01668C15.3844 3.81504 15.4756 4.9683 15.4821 5.80952H20.2703C20.6733 5.80952 21 6.12932 21 6.52381C21 6.9183 20.6733 7.2381 20.2703 7.2381H3.72973C3.32671 7.2381 3 6.9183 3 6.52381Z" fill="#1C274C"></path> <path opacity="0.5" d="M11.5956 22.0001H12.4044C15.1871 22.0001 16.5785 22.0001 17.4831 21.1142C18.3878 20.2283 18.4803 18.7751 18.6654 15.8686L18.9321 11.6807C19.0326 10.1037 19.0828 9.31524 18.6289 8.81558C18.1751 8.31592 17.4087 8.31592 15.876 8.31592H8.12405C6.59127 8.31592 5.82488 8.31592 5.37105 8.81558C4.91722 9.31524 4.96744 10.1037 5.06788 11.6807L5.33459 15.8686C5.5197 18.7751 5.61225 20.2283 6.51689 21.1142C7.42153 22.0001 8.81289 22.0001 11.5956 22.0001Z" fill="#1C274C"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.42543 11.4815C9.83759 11.4381 10.2051 11.7547 10.2463 12.1885L10.7463 17.4517C10.7875 17.8855 10.4868 18.2724 10.0747 18.3158C9.66253 18.3592 9.29499 18.0426 9.25378 17.6088L8.75378 12.3456C8.71256 11.9118 9.01327 11.5249 9.42543 11.4815Z" fill="#1C274C"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5747 11.4815C14.9868 11.5249 15.2875 11.9118 15.2463 12.3456L14.7463 17.6088C14.7051 18.0426 14.3376 18.3592 13.9254 18.3158C13.5133 18.2724 13.2126 17.8855 13.2538 17.4517L13.7538 12.1885C13.795 11.7547 14.1625 11.4381 14.5747 11.4815Z" fill="#1C274C"></path> </g></svg>
+    </div>
+    </div>
+ <div class="taskbar" >
+  <div class="icons">
+
+      <div class="icons-left">
+          <a id="start-menu" class="icon-system"  (click)="openMenu()"><i  ></i></a>        
+          <a id="search"> </a>
+ 
+           <a  class="px"></a>
+          <a   id="folder" (click)="openFolder()" class="border"></a>
+          <a   id="store" (click)="openStore()" class="border"></a>
+
+           <a  id="terminal" (click)="openTerminal()" class="border"></a>
+
+          <a  id="chrome" (click)="openBrowser()" class="border"></a>
+      </div>
+      <div class="icons-right">
+          <a id="up" class="small-icons"><i class="fas fa-chevron-up"></i></a>
+          <a  id="sound" class="small-icons" (click)="openAudio()"></a>
+          <a id="wifi" class="small-icons" (click)="openWifi()"></a>
+          <div class="datetime">
+            <span class="hour"> {{hour}}</span>
+           </div>
+          <a id="notifications"><i class="far fa-bell"></i></a>
+          <a class="clear disabled"></a>      
+      </div>
+  </div>
+</div>  
+  </body>
+</html>
+

@@ -1,0 +1,6 @@
+<div class="blackout" *ngIf="blackout">
+    <p class="shutdown-message" *ngIf="loading">Shutting down... Goodbye!</p>
+     <div *ngIf="loading" class="loading-indicator"></div>
+     <div *ngIf="loading == false" class="div-black"></div>
+
+  </div>

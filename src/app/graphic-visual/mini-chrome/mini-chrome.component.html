@@ -1,0 +1,69 @@
+<body>
+<div class="mini-chrome-container">
+    <div class="chrome-header" >
+      <div class="chrome-buttons">
+        <div  (click)="rickroll()"><svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M20.75 12C20.75 11.5858 20.4142 11.25 20 11.25H10.75V12.75H20C20.4142 12.75 20.75 12.4142 20.75 12Z" fill="#1C274C"></path> <path d="M10.75 18C10.75 18.3034 10.5673 18.5768 10.287 18.6929C10.0068 18.809 9.68417 18.7449 9.46967 18.5304L3.46967 12.5304C3.32902 12.3897 3.25 12.1989 3.25 12C3.25 11.8011 3.32902 11.6103 3.46967 11.4697L9.46967 5.46969C9.68417 5.25519 10.0068 5.19103 10.287 5.30711C10.5673 5.4232 10.75 5.69668 10.75 6.00002V18Z" fill="#1C274C"></path> </g></svg></div>
+        <div  > <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M3.25 12C3.25 11.5858 3.58579 11.25 4 11.25H13.25V12.75H4C3.58579 12.75 3.25 12.4142 3.25 12Z" fill="#1C274C"></path> <path d="M13.25 12.75V18C13.25 18.3034 13.4327 18.5768 13.713 18.6929C13.9932 18.809 14.3158 18.7449 14.5303 18.5304L20.5303 12.5304C20.671 12.3897 20.75 12.1989 20.75 12C20.75 11.8011 20.671 11.6103 20.5303 11.4697L14.5303 5.46969C14.3158 5.25519 13.9932 5.19103 13.713 5.30711C13.4327 5.4232 13.25 5.69668 13.25 6.00002V11.25V12.75Z" fill="#1C274C"></path> </g></svg></div>
+ 
+      </div>
+
+        <input
+          type="text"
+          [(ngModel)]="currentUrl"
+          placeholder="Digite a URL e pressione Enter"
+          (keyup.enter)="loadPage()"
+        />
+     </div>
+    <div class="chrome-content">
+        <div class="google-page">
+          <div class="google-search-bar">
+            <input
+              type="text"
+              [(ngModel)]="myName"
+              placeholder="Pesquisar no Google"
+            /> 
+            <div class="search-buttons">
+              <div class="search-button"></div>
+             </div>
+          </div>
+          <div class="google-results">
+ 
+            <div class="result-item">
+              <a class="result-title">who is Gabriel?</a>
+              <p class="result-snippet">lorem ipsum lorem ipsum</p>
+            </div>
+            <div class="result-item">
+              <a  class="result-title">How old is Gabriel?</a>
+ 
+              <p class="result-snippet">"He is 22 years old and was born in 2001."</p>
+            </div>
+            <div class="result-item">
+              <a  class="result-title">Where does he live?</a>
+              <p class="result-snippet">He lives in Serrana region of Rio de Janeiro, Brazil. </p>
+            </div>
+            <div class="result-item">
+              <a  class="result-title" (click)="rickroll()">RickRoll?</a>
+              <p class="result-snippet" *ngIf="rick == false" >  
+                Richard Paul Astley é um cantor, compositor, e personalidade do rádio inglês...
+              </p>
+              <iframe  *ngIf="rick" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=6-kzVOP_eLoXelMy&amp;start=44" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>           
+              <p class="result-snippet" *ngIf="rick" >  
+                <li>
+                <ul>Never gonna give you up</ul>
+                <ul>Never gonna let you down</ul>
+              <ul>Never gonna run around and desert you</ul>
+              <ul>Never gonna make you cry</ul>
+              <ul>Never gonna say goodbye</ul>
+              <ul> Never gonna tell a lie and hurt you</ul>
+              </li>
+              </p>
+            </div>
+           </div>
+        </div>
+      </div>
+      
+    <div class="chrome-status-bar">
+      <span class="status-text">Conectado</span>
+    </div>
+  </div>
+</body>

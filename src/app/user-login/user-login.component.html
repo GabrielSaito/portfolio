@@ -1,0 +1,46 @@
+ 
+ 
+
+
+<div *ngIf="showLogin"   class="mac-login">
+
+
+    <div class="mac-login-window">
+
+      <div class="mac-login-body">
+            <div class="mac-login-photo">
+                
+    </div>
+        <form>
+            <label  for="username">Username:</label>
+
+          <div class="mac-login-field">
+            <input type="text" id="username" name="username" required [(ngModel)]="username">
+        </div>
+ 
+          <div class="mac-login-field">
+            <input type="password" id="password" name="password" class="password-input"   value="{{password}}" readonly>
+         </div>
+  
+          <div class="mac-login-buttons">
+            <button type="button" class="mac-login-cancel">Cancel</button>
+            <button type="submit" class="mac-login-submit" (click)="handleLoginClick()">Login</button>
+        </div>
+        
+        </form>
+        
+      </div>
+      <div class="mac-login-buttons">
+        <button type="button" class="mac-login-powerOff" (click)="power()" >Power Off</button>
+     </div>
+    </div>
+    
+  </div>
+ 
+<app-power-off *ngIf="powerOff"></app-power-off>
+  
+<app-graphic-visual *ngIf="showGraphic "></app-graphic-visual>
+
+
+<app-terminal *ngIf="showTerminal"></app-terminal>
+

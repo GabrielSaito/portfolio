@@ -1,0 +1,7 @@
+<div #movableWindow class="movable-window"
+     (mousedown)="onMouseDown($event)"
+     (document:mousemove)="onMouseMove($event)"
+     (document:mouseup)="onMouseUp()">
+  <ng-content style="     cursor:default;
+  "></ng-content>
+</div>

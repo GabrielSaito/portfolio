@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="left-menu">
+      <!-- Add menu items here -->
+      <a href="#">Home</a>
+      <a href="#">Settings</a>
+      <a href="#">About</a>
+  </div>
+
+  <div class="control-panel">
+      <div class="header">
+          <svg class="windows-logo" width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+              <!-- ... (Your SVG code) ... -->
+          </svg>
+          <span class="title">Control Panel</span>
+      </div>
+
+      <div class="setting">
+          <label for="brightness">Brightness:</label>
+          <input type="range" id="brightness" min="0" max="100" />
+      </div>
+
+      <div class="section">
+          <h3>System Settings</h3>
+          <div class="setting">
+              <label for="language">Language:</label>
+              <select id="language">
+                  <option value="en">English</option>
+                  <option value="pt">Portuguese (soon)</option>
+              </select>
+          </div>
+      </div>
+
+      <div class="section">
+          <h3>Programs</h3>
+          <div class="setting">
+              <button (click)="uninstallProgram()">Uninstall Graphics</button>
+              <app-power-off *ngIf="powerOff"> </app-power-off>
+          </div>
+      </div>
+  </div>
+</div>
